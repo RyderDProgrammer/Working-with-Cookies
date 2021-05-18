@@ -16,6 +16,6 @@ function deleteCookieData() {
     alert(Cookies.get(cookieKey));
 }
 function createCookieData() {
-    Cookies.set(cookieKey, "This is a test");
+    Cookies.set(cookieKey, "This is a test", { expires: 1 });
     alert("Cookie was created");
 }
