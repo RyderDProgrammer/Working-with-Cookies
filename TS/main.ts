@@ -9,17 +9,23 @@ window.onload = function()
     createCookie.onclick = createCookieData;
 }
 
+let cookieKey = "TestCookie";
+
 function readCookieData()
 {
-
+    let data = Cookies.get(cookieKey);
+    alert(data);
 }
 
 function deleteCookieData()
 {
-
+    Cookies.remove(cookieKey);
+    //Showing off that it no longer exist
+    alert(Cookies.get(cookieKey));
 }
 
 function createCookieData()
 {
-    
+    Cookies.set(cookieKey, "This is a test");
+    alert("Cookie was created");
 }

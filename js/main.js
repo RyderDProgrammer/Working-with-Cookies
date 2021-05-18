@@ -6,9 +6,16 @@ window.onload = function () {
     deleteCookie.onclick = deleteCookieData;
     createCookie.onclick = createCookieData;
 };
+var cookieKey = "TestCookie";
 function readCookieData() {
+    var data = Cookies.get(cookieKey);
+    alert(data);
 }
 function deleteCookieData() {
+    Cookies.remove(cookieKey);
+    alert(Cookies.get(cookieKey));
 }
 function createCookieData() {
+    Cookies.set(cookieKey, "This is a test");
+    alert("Cookie was created");
 }
