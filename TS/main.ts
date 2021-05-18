@@ -12,7 +12,6 @@ window.onload = function()
 function readCookieData()
 {
 
-
 }
 
 function deleteCookieData()
